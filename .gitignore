@@ -1,6 +1,6 @@
 /data
 entries.json
-
+/dist/*
 # Logs
 logs
 *.log

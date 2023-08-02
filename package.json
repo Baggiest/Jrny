@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "main.ts",
   "scripts": {
-    "start": "ts-node ./src/main.ts"
+    "start": "ts-node ./src/main.ts",
+    "build": "tsc"
   },
+  "bin": "./dist/main.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,6 +15,7 @@
     "@inquirer/prompts": "^3.0.1",
     "@types/node": "^20.4.5",
     "moment": "^2.29.4",
-    "node-json-db": "^2.2.0"
+    "node-json-db": "^2.2.0",
+    "typescript": "^5.1.6"
   }
 }

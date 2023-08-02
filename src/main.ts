@@ -2,21 +2,19 @@
 
 import create from "./utils/create";
 import getInput from "./cli/inquirer";
-// import destroy from "./utils/destroy"
+import bootstrap from "./db/bootstrap";
 
 let inputArray: string[] = process.argv.slice(2);
-console.log(inputArray)
+bootstrap()
 
 switch (inputArray[0]) {
 
     case "new":
         // create entry
         getInput().then((text) => {
-
-            console.log("noted!")
+            console.log("noted!");
             create(text, false, 1);
         })
-
         break;
 
     case "delete":

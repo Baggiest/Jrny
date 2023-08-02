@@ -4,7 +4,8 @@
     "moduleResolution": "NodeNext",
     "target": "ES2020",
     "sourceMap": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*", "test/create.test.ts", "test/destroy.test.ts", "test/read.test.ts", "test/update.test.ts"]
+  "include": ["src/**/*", "src/test/create.test.ts", "src/test/destroy.test.ts", "src/test/read.test.ts", "src/test/update.test.ts"]
 }
