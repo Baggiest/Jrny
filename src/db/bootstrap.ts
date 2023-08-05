@@ -18,7 +18,7 @@ export default async function bootstrap() {
         }
 
         handler.create(boilerplate).then(() => {
-            console.log("\ninitialized the DB\n press any key for the prompt to appear again \n its a first time quirk")
+            console.log("\ninitialized the DB\n Press any key for the prompt to appear again \n its a first time quirk")
         })
     }
 };

@@ -1,4 +1,3 @@
-import { builtinModules } from "module"
 import { Handler, Entry } from "../db/handler"
 
 const handler = new Handler
@@ -16,5 +15,6 @@ export default async function create(text: string, isEncrypted: boolean, moodLev
 		isEncrypted: isEncrypted,
 		moodLevel: moodLevel
 	}
+	
 	handler.create(entry)
 }
