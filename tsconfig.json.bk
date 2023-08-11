@@ -1,0 +1,14 @@
+// previous tsconfig that didnt work
+// something wrong with nodenext i guess
+
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "sourceMap": true,
+    "outDir": "dist",
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*", "src/test/create.test.ts", "src/test/destroy.test.ts", "src/test/read.test.ts", "src/test/update.test.ts"]
+}

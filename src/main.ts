@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 // routes the command based on the provided flag 
 
 import create from "./utils/create";

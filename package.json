@@ -1,10 +1,11 @@
 {
-  "name": "jrnly",
-  "version": "1.0.0",
+  "name": "jrny",
+  "version": "1.0.2",
   "main": "main.ts",
   "scripts": {
-    "start": "ts-node ./src/main.ts",
-    "build": "tsc"
+    "start": "node ./dist/main.js",
+    "build": "tsc",
+    "dev": "tsc && node ./dist/main.js"
   },
   "bin": "./dist/main.js",
   "keywords": [],
