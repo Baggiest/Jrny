@@ -9,12 +9,9 @@ export default async function create(text: string, isEncrypted: boolean, moodLev
 	// console.log(Object.keys(object).length)
 
 	const entry: Entry = {
-		index: await handler.count() - 1,
-		UID: timestamp,
 		text: text,
-		isEncrypted: isEncrypted,
-		moodLevel: moodLevel
+		hash: timestamp.toString()
 	}
-	
+
 	handler.create(entry)
 }

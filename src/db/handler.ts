@@ -1,38 +1,32 @@
-import { JsonDB, Config } from "node-json-db";
+import { PrismaClient } from "@prisma/client"
+const db = new PrismaClient();
 
-let db = new JsonDB(new Config("entries", true, true, "/"))
 
 export interface Entry {
-    UID: number,
-    index?: number,
+    hash?: string,
     text?: string,
-    isEncrypted?: boolean,
-    moodLevel?: number
 }
 
 export class Handler {
 
-    async create(entry: Entry) {
+    async create(passedEntry: Entry) {
 
-        // creates a new entry
-        // the if statement is there to coverup for
-        // the bootstrap() function quirk
-        db.push(`/entries`, [entry], false).then(() => {
-            if (entry.UID === 0) return;
-            console.log(`Created an entry with the ID of ${entry.UID}`)
-        })
+        db.entry.create({ data: passedEntry })
     }
 
-    async read() {
+    async read(key: number) {
 
-        // returns content part of the entry object
-        let result = await db.getData("entries/");
+        let result = await db.entry.findUnique({
+            where: {
+                index: key
+            }
+        })
         return result;
     }
 
     async count() {
 
         // returns the number of entries in db
-        return db.count("/entries")
+        // return db.count("/entries")
     }
 }
