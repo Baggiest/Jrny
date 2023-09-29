@@ -3,7 +3,7 @@
 
 import create from "./utils/create";
 import getInput from "./cli/inquirer";
-import bootstrap from "./db/bootstrap";
+import bootstrap from "./db/bootstrap.mjs";
 
 let inputArray: string[] = process.argv.slice(2);
 bootstrap()
