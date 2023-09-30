@@ -1,6 +1,9 @@
 import { JsonDB, Config } from "node-json-db";
+import chopper from "./snipper";
 
-let db = new JsonDB(new Config("entries", true, true, "/"))
+let db = new JsonDB(new Config("src/data.json", true, true, "/"))
+console.log(process.argv)
+console.log(chopper(process.argv[1]));
 
 export interface Entry {
     UID: number,

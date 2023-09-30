@@ -1,6 +1,6 @@
 {
   "name": "jrny",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "main": "main.ts",
   "scripts": {
     "start": "node ./dist/main.js",
@@ -18,5 +18,8 @@
     "moment": "^2.29.4",
     "node-json-db": "^2.2.0",
     "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "vitest": "^0.34.6"
   }
 }
